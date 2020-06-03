@@ -1,3 +1,4 @@
+-- BABIES DATASET
 -- Find the number of girls who were named Lillian for the full span of time of the database.
 
 -- Select only the year and number columns.
@@ -25,7 +26,24 @@ where year = 1880
 order by number desc
 limit 10;
 
+-- NOMNOM DATASSET
+/* Suppose your friend Jaime wants to go out to Japanese, but you’re on a budget.
+
+Return all the restaurants that are Japanese and $$.
+
+Select all the columns. */
+
+select * 
+from nomnom 
+where cuisine = 'Japanese' and price = '$$';
 
 
+ /* Your roommate Bevers can’t remember the exact name of a restaurant he went to but he knows it contains the word ‘noodle’ in it.
 
+Can you find it for him using a query?
 
+Select all the columns. */
+
+select * 
+from nomnom
+where name like '%noodle%';
