@@ -1,7 +1,0 @@
--- Find the number of girls who were named Lillian for the full span of time of the database.
-
--- Select only the year and number columns.
-
-select year, number
-from babies
-where name = 'Lillian';
