@@ -1,0 +1,93 @@
+-- BABIES DATASET
+-- Find the number of girls who were named Lillian for the full span of time of the database.
+
+-- Select only the year and number columns.
+
+select year, number
+from babies
+where name = 'Lillian';
+
+/* Find 20 distinct names that start with ‘S’.
+
+Select only the name column. */
+
+      select name 
+      from babies
+      where name like 'S%'
+      limit 20;
+
+/* What are the top 10 names in 1880?
+
+Select the name, gender, and number columns. */
+
+select name, gender, number
+from babies
+where year = 1880
+order by number desc
+limit 10;
+
+-- NOMNOM DATASSET
+/* Suppose your friend Jaime wants to go out to Japanese, but you’re on a budget.
+
+Return all the restaurants that are Japanese and $$.
+
+Select all the columns. */
+
+        select * 
+        from nomnom 
+        where cuisine = 'Japanese' and price = '$$';
+
+
+ /* Your roommate Bevers can’t remember the exact name of a restaurant he went to but he knows it contains the word ‘noodle’ in it.
+
+Can you find it for him using a query?
+
+Select all the columns. */
+
+          select * 
+          from nomnom
+          where name like '%noodle%';
+
+ /* Some of the restaurants have not been inspected yet or are currently appealing their health grade score.
+
+Find the restaurants that have empty health values.
+
+Select all the columns. */
+
+           select *
+           from nomnom
+           where health is null;
+           
+ 
+ -- NEWS DATABASE
+ 
+  /* Order the table by title (from A-Z).
+
+Select only the title and publisher columns. */
+
+   select title, publisher
+   from news 
+   order by title asc;
+   
+/* Which article names have the word 'bitcoin' in it?
+
+Select all the columns. */
+
+  select *
+  from news
+  where title like '%bitcoin%';
+  
+/* The category column contains the article category:
+
+'b' stands for Business
+'t' stands for Technology
+What are the 20 business articles published most recently?
+
+Select all the columns. */
+
+     select * 
+     from news
+     where category = 'b'
+     order by timestamp desc
+     limit 20;
+
